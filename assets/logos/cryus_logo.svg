@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+ <!-- Background Circle - Transparent -->
+ <circle cx="200" cy="200" r="190" fill="transparent" />
+ <!-- Hand-drawn style C shape base -->
+ <path d="M240,140 C240,100 200,85 160,90 C120,95 90,130 85,180 C80,230 100,280 150,290 C190,298 230,270 245,240"
+ fill="none"
+ stroke="#222222"
+ stroke-width="30"
+ stroke-linecap="round"
+ stroke-linejoin="round" />
+ <!-- Hand-drawn style curve inside C -->
+ <path d="M190,130 C175,130 145,145 140,180 C135,220 145,250 180,250"
+ fill="none"
+ stroke="#222222"
+ stroke-width="25"
+ stroke-linecap="round"
+ stroke-linejoin="round" />
+ <!-- Top decorative lines - three -->
+ <path d="M130,90 C135,80 145,75 155,80"
+ fill="none"
+ stroke="#222222"
+ stroke-width="18"
+ stroke-linecap="round"
+ stroke-linejoin="round" />
+ <path d="M170,75 C180,65 190,65 195,70"
+ fill="none"
+ stroke="#222222"
+ stroke-width="18"
+ stroke-linecap="round"
+ stroke-linejoin="round" />
+ <path d="M210,80 C220,70 230,75 235,85"
+ fill="none"
+ stroke="#222222"
+ stroke-width="18"
+ stroke-linecap="round"
+ stroke-linejoin="round" />
+ <!-- Small hook in the bottom right -->
+ <path d="M240,240 C250,240 255,250 245,260"
+ fill="none"
+ stroke="#222222"
+ stroke-width="20"
+ stroke-linecap="round"
+ stroke-linejoin="round" />
+</svg> 

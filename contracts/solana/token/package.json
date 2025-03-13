@@ -1,0 +1,15 @@
+{
+  "name": "cryus-token-client",
+  "version": "0.1.0",
+  "description": "Cryus代币智能合约的客户端示例",
+  "main": "client-example.js",
+  "scripts": {
+    "start": "node client-example.js"
+  },
+  "author": "Cryus Team",
+  "license": "MIT",
+  "dependencies": {
+    "@solana/web3.js": "^1.87.6",
+    "bn.js": "^5.2.1"
+  }
+} 
