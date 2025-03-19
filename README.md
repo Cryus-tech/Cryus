@@ -1,6 +1,8 @@
 # Cryus AI-Driven Token Generation Platform
 
-![Cryus Banner](assets/cryus-banner.png)
+<div align="center">
+  <img src="assets/logos/cryus_logo.svg" alt="Cryus Logo" width="250">
+</div>
 
 ## Overview
 
