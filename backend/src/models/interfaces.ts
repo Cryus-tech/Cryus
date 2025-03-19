@@ -1112,4 +1112,124 @@ export interface SecurityAuditResponse {
   };
   // 建议的改进
   suggestedImprovements?: string[];
-}; 
+};
+
+/**
+ * Blockchain types supported by the system
+ */
+export enum BlockchainType {
+  ETHEREUM = 'ethereum',
+  SOLANA = 'solana',
+  BSC = 'bsc',
+  POLYGON = 'polygon',
+  AVALANCHE = 'avalanche',
+  ARBITRUM = 'arbitrum'
+}
+
+/**
+ * Network configuration for a blockchain
+ */
+export interface NetworkConfig {
+  chainId: number;
+  name: string;
+  currencySymbol: string;
+  blockExplorerUrl: string;
+}
+
+/**
+ * Token configuration parameters
+ */
+export interface TokenConfig {
+  name: string;
+  symbol: string;
+  decimals: number;
+  initialSupply: string | number;
+  maxSupply?: string | number;
+  features?: TokenFeature[];
+  owner?: string;
+  metadata?: TokenMetadata;
+}
+
+/**
+ * Token features that can be enabled
+ */
+export enum TokenFeature {
+  MINTABLE = 'mintable',
+  BURNABLE = 'burnable',
+  PAUSABLE = 'pausable',
+  PERMIT = 'permit',
+  VOTES = 'votes',
+  SNAPSHOT = 'snapshot',
+  FLASH_MINTING = 'flashMinting',
+  ANTI_BOT = 'antiBot',
+  LIQUIDITY_GENERATOR = 'liquidityGenerator',
+  TAX = 'tax',
+  MAX_TRANSACTION = 'maxTransaction',
+  MAX_WALLET = 'maxWallet',
+  BLACKLIST = 'blacklist'
+}
+
+/**
+ * Additional token metadata
+ */
+export interface TokenMetadata {
+  description?: string;
+  website?: string;
+  logoUrl?: string;
+  socials?: {
+    twitter?: string;
+    telegram?: string;
+    github?: string;
+  };
+  taxConfig?: {
+    buyTax?: number;
+    sellTax?: number;
+    transferTax?: number;
+    marketingTaxShare?: number;
+    liquidityTaxShare?: number;
+    developmentTaxShare?: number;
+  };
+  antiBot?: {
+    enabled: boolean;
+    maxTransactionAmount?: string;
+    maxWalletAmount?: string;
+    tradingActivationDelay?: number;
+  };
+}
+
+/**
+ * Result of a token deployment operation
+ */
+export interface DeploymentResult {
+  success: boolean;
+  contractAddress?: string;
+  txHash?: string;
+  blockNumber?: number;
+  timestamp: number;
+  chainType: BlockchainType;
+  explorerUrl?: string;
+  error?: string;
+}
+
+/**
+ * Fee estimate for blockchain operations
+ */
+export interface FeeEstimate {
+  fee: string;
+  feeUSD: string;
+  currency: string;
+  gasLimit?: string;
+  gasPrice?: string;
+}
+
+/**
+ * Transaction status
+ */
+export interface TransactionStatus {
+  status: 'PENDING' | 'CONFIRMED' | 'FAILED' | 'ERROR';
+  confirmations?: number;
+  blockNumber?: number | null;
+  gasUsed?: string;
+  timestamp: number;
+  error?: string | null;
+} 
